@@ -1,18 +1,16 @@
-import Input from '../components/vue/Input';
-
 const Spacer = () => <span style="color: #ccc;">|</span>;
 
-const Divider = () => (
-  <div style="width: 100%; border-bottom: 1px solid #ccc;"></div>
-);
+interface Props {
+  email: string;
+  password: string;
+}
 
-export const Login = () => {
+export const Login = ({ email, password }: Props) => {
   return (
     <el-main style={mainStyle}>
       <el-card style={cardStyle}>
         <el-space style={innerWrapperStyle} direction="vertical" size={20}>
           <div style="font-weight: 600;">勤怠管理システム</div>
-          <Divider />
           <el-space
             style={formWrapperStyle}
             direction="vertical"
@@ -20,11 +18,11 @@ export const Login = () => {
           >
             <el-space style={inputWrapperStyle} spacer={<Spacer />}>
               <div>Email</div>
-              <el-input style={inputStyle}></el-input>
+              <el-input value={email} style={inputStyle}></el-input>
             </el-space>
             <el-space spacer={<Spacer />}>
               <div>Password</div>
-              <el-input style={inputStyle}></el-input>
+              <el-input value={password} style={inputStyle}></el-input>
             </el-space>
             <el-button onClick={() => navigateTo('/')} type="primary">
               ログイン
