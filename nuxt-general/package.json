@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "2.0.10",
+    "@element-plus/theme-chalk": "2.2.16",
+    "@nuxtjs/supabase": "0.3.0",
+    "date-fns": "2.29.3",
+    "element-plus": "2.2.26",
+    "sass": "1.56.1"
+  }
+}
